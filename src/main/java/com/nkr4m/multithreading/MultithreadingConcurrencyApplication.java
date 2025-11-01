@@ -21,23 +21,25 @@ public class MultithreadingConcurrencyApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        Thread producerThread = new Thread(() -> {
-            try {
-                producerConsumer.produce();
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-            }
-        }, "ProducerThread");
-
-        Thread consumerThread = new Thread(() -> {
-            try {
-                producerConsumer.consume();
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-            }
-        }, "ConsumerThread");
-
-        producerThread.start();
-        consumerThread.start();
+//        Thread producerThread = new Thread(() -> {
+//            try {
+//                producerConsumer.produce();
+//            } catch (InterruptedException e) {
+//                Thread.currentThread().interrupt();
+//            }
+//        }, "ProducerThread");
+//
+//        Thread consumerThread = new Thread(() -> {
+//            try {
+//                producerConsumer.consume();
+//            } catch (InterruptedException e) {
+//                Thread.currentThread().interrupt();
+//            }
+//        }, "ConsumerThread");
+//
+//        producerThread.start();
+//        consumerThread.start();
+    	
+    	
     }
 }
